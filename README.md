@@ -4,8 +4,6 @@
 The findtb package downloads TB data from the WHO, cleans the data, and
 then exports it into a standard rectangular format for use in the gap package.
 
-Data can be accessed with `findtb::data`.
-
 ## Installation
 
 You can install the development version from
@@ -20,14 +18,11 @@ devtools::install_github("finddx/findtb")
 
 To add data sets to the package:
 
-1. Update `data-raw/query-urls.R`. Keep to alphabetical ordering.
-Make sure to build and export the tibble.
-2. Add a file to `data-raw/`. See other files for template.
-3. Document the data set in `R/data.R`. Keep to alphabetical ordering.
-4. Run `devtools::document()` to export documentation.
-5. Run `devtools::check()` to check for errors/warnings/notes.
-6. Update `LICENSE` by adding the license of the new data set if not already
-covered.
+1. Add a file to `data-raw/`, exporting a dataset to `data/`.
+2. Document the data with roxygen comments in `R/data.R`, if required.
+3. Run `devtools::document()` to export documentation.
+4. Run `devtools::check()` to check for errors/warnings/notes.
+5. Update `LICENSE` by adding the license of the new data set if not already covered.
 
 ## Contributing
 
