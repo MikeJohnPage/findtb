@@ -1,9 +1,7 @@
-library(tidyverse)
+raw <- readr::read_csv("https://extranet.who.int/tme/generateCSV.asp?ds=budget")
 
-raw <- read_csv("https://extranet.who.int/tme/generateCSV.asp?ds=budget")
-
-raw_subset <- raw |> select(
-  all_of(
+raw_subset <- raw |> dplyr::select(
+  tidyselect::all_of(
     c(
       "country",
       "country_code" = "iso3",
@@ -24,7 +22,7 @@ raw_subset <- raw |> select(
 )
 
 budget <- raw_subset |>
-  pivot_longer(
+  tidyr::pivot_longer(
     cols = -c(country, country_code, g_whoregion, year),
     names_to = "variable"
   )
