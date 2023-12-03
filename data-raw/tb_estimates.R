@@ -17,10 +17,10 @@ raw_subset <- raw |> dplyr::select(
   )
 )
 
-estimates <- raw_subset |>
+tb_estimates <- raw_subset |>
   tidyr::pivot_longer(
     cols = -c(country, country_code, g_whoregion, year),
     names_to = "variable"
   )
 
-usethis::use_data(estimates, overwrite = TRUE)
+usethis::use_data(tb_estimates, overwrite = TRUE)

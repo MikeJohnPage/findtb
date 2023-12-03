@@ -17,10 +17,10 @@ raw_subset <- raw |> dplyr::select(
   )
 )
 
-notifications <- raw_subset |>
+tb_notifications <- raw_subset |>
   tidyr::pivot_longer(
     cols = -c(country, country_code, g_whoregion, year),
     names_to = "variable"
   )
 
-usethis::use_data(notifications, overwrite = TRUE)
+usethis::use_data(tb_notifications, overwrite = TRUE)

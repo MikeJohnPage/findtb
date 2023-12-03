@@ -21,10 +21,10 @@ raw_subset <- raw |> dplyr::select(
   )
 )
 
-budget <- raw_subset |>
+tb_budget <- raw_subset |>
   tidyr::pivot_longer(
     cols = -c(country, country_code, g_whoregion, year),
     names_to = "variable"
   )
 
-usethis::use_data(budget, overwrite = TRUE)
+usethis::use_data(tb_budget, overwrite = TRUE)

@@ -18,10 +18,10 @@ raw_subset <- raw |> dplyr::select(
   )
 )
 
-community <- raw_subset |>
+tb_community <- raw_subset |>
   tidyr::pivot_longer(
     cols = -c(country, country_code, g_whoregion, year),
     names_to = "variable"
   )
 
-usethis::use_data(community, overwrite = TRUE)
+usethis::use_data(tb_community, overwrite = TRUE)

@@ -18,10 +18,10 @@ raw_subset <- raw |> dplyr::select(
   )
 )
 
-expenditure <- raw_subset |>
+tb_expenditure <- raw_subset |>
   tidyr::pivot_longer(
     cols = -c(country, country_code, g_whoregion, year),
     names_to = "variable"
   )
 
-usethis::use_data(expenditure, overwrite = TRUE)
+usethis::use_data(tb_expenditure, overwrite = TRUE)

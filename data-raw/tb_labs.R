@@ -20,10 +20,10 @@ raw_subset <- raw |> dplyr::select(
   )
 )
 
-labs <- raw_subset |>
+tb_labs <- raw_subset |>
   tidyr::pivot_longer(
     cols = -c(country, country_code, g_whoregion, year),
     names_to = "variable"
   )
 
-usethis::use_data(labs, overwrite = TRUE)
+usethis::use_data(tb_labs, overwrite = TRUE)
