@@ -14,7 +14,12 @@ test_that("datasets have class tibble", {
 })
 
 test_that("column types", {
-  expect_type(tb_all$)
+  expect_type(tb_all$country, "character")
+  expect_type(tb_all$country_code, "character")
+  expect_type(tb_all$g_whoregion, "character")
+  expect_type(tb_all$year, "double")
+  expect_type(tb_all$variable, "character")
+  expect_type(tb_all$value, "double")
 })
 
 test_that("dataset snapshots", {
