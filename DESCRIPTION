@@ -1,6 +1,6 @@
 Package: findtb
 Title: Download and Clean WHO TB Data
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: c(
     person("Anna", "Mantsoki", , "anna.mantsoki@finddx.org", role = c("aut", "cre")),
     person("Mike", "Page", , "mike@cynkra.com", role = "aut"),
