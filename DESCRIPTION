@@ -1,19 +1,12 @@
 Package: findtb
 Title: Download and Clean WHO TB Data
 Version: 0.0.0.9000
-Authors@R: 
-    c(person(given = "Andrea",
-             family = "Ranzato",
-             role = c("aut", "cre"),
-             email = "andrea@cynkra.com"),
-      person(given = "Mike",
-             family = "Page",
-             role = c("aut"),
-             email = "mike@cynkra.com")
-      person(given = "Anna",
-             family = "Mantsoki",
-             role = c("aut"),
-             email = "anna.mantsoki@finddx.org")  )
+Authors@R: c(
+    person("Anna", "Mantsoki", , "anna.mantsoki@finddx.org", role = c("aut", "cre")),
+    person("Mike", "Page", , "mike@cynkra.com", role = "aut"),
+    person("Andrea", "Ranzato", , "andrea@cynkra.com", role = "aut"),
+    person("FIND", role = c("cph", "fnd"))
+  )
 Description: Downloads and cleans data from the WHO on TB. The data is exported
     to a common rectangular format, for calculation by the finddxgap package.
 License: GPL (>= 3)
