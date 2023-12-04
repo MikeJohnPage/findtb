@@ -5,44 +5,37 @@ The findtb package downloads TB data from the WHO, cleans the data, and
 then exports it into a standard rectangular format for use in the gap package.
 
 The package exports seven datasets called:
-- tb_budget
-- tb_community
-- tb_estimates
-- tb_expenditure
-- tb_labs
-- tb_notifications
-- tb_all (a data set joining all of the above)
+- `tb_all` (a data set joining all of the below)
+- `tb_budget`
+- `tb_community`
+- `tb_estimates`
+- `tb_expenditure`
+- `tb_labs`
+- `tb_notifications`
 
-If you use an IDE, the shared `tb_` prefix should make dataset discovery easier
-when using autocomplete.
+It also ships with a data dictionary to lookup definitions:
+- `tb_dictionary`
 
 ## Installation
-
-You can install the development version from
-[GitHub](https://github.com/) with:
-
 ``` r
-# install.packages("devtools")
-devtools::install_github("finddx/findtb")
+# Install the development version from GitHub:
+# install.packages("pak")
+pak::pak("finddx/findtb")
 ```
 
 ## Development
-
 To add data sets to the package:
 
 1. Add a file to `data-raw/`, exporting a dataset to `data/`.
-2. Document the data with roxygen comments in `R/data.R`, if required.
-3. Run `devtools::document()` to export documentation.
-4. Run `devtools::check()` to check for errors/warnings/notes.
-5. Update `LICENSE` by adding the license of the new data set if not already covered.
+2. Update `R/tb_all.R` and `R/tb_dictionary.R`.
+3. Update and rebuild the documentation in `R/data.R`, if required.
+4. Rebuild the package.
 
 ## Contributing
-
 To contribute to this project, please follow [GitHub Flow](https://guides.github.com/introduction/flow/)
 when submitting changes.
 
 > Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
 
 ## Credits
-
 See [LICENSE](/LICENSE)
