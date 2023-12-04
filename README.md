@@ -38,7 +38,7 @@ high TB burden countries:
 ``` r
 # Install the development version from GitHub:
 # install.packages("pak")
-pak::pak("finddx/findtb")
+pak::pak("mikejohnpage/findtb")
 ```
 
 ## Usage
