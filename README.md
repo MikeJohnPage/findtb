@@ -27,9 +27,11 @@ The package exports seven datasets called:
 - `tb_labs`
 - `tb_notifications`
 
-It also ships with a data dictionary to lookup definitions:
+It also ships with a data dictionary to lookup definitions and a list of
+high TB burden countries:
 
 - `tb_dictionary`
+- `tb_high_burden`
 
 ## Installation
 
@@ -73,6 +75,25 @@ tb_dictionary |>
 #> 4 tb_estimates e_inc_num     Estimated number of incident cases (all forms)     
 #> 5 tb_estimates e_mort_100k   Estimated mortality of TB cases (all forms) per 10…
 #> 6 tb_estimates e_pop_num     Estimated total population number
+
+# Return the estimates for 2021 of only the high TB burden countries:
+tb_estimates |> 
+  dplyr::filter(year == 2021) |> 
+  dplyr::semi_join(tb_high_burden)
+#> # A tibble: 168 × 6
+#>    country    country_code g_whoregion  year variable         value
+#>    <chr>      <chr>        <chr>       <dbl> <chr>            <dbl>
+#>  1 Angola     AGO          AFR          2021 c_cdr               56
+#>  2 Angola     AGO          AFR          2021 c_newinc_100k      179
+#>  3 Angola     AGO          AFR          2021 e_inc_100k         322
+#>  4 Angola     AGO          AFR          2021 e_inc_num       111000
+#>  5 Angola     AGO          AFR          2021 e_mort_100k         59
+#>  6 Angola     AGO          AFR          2021 e_pop_num     34503774
+#>  7 Bangladesh BGD          SEA          2021 c_cdr               82
+#>  8 Bangladesh BGD          SEA          2021 c_newinc_100k      181
+#>  9 Bangladesh BGD          SEA          2021 e_inc_100k         221
+#> 10 Bangladesh BGD          SEA          2021 e_inc_num       375000
+#> # ℹ 158 more rows
 ```
 
 ## Development

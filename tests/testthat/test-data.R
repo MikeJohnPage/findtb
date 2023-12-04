@@ -9,6 +9,7 @@ test_that("datasets have class tibble", {
   expect_s3_class(tb_dictionary, "tbl_df")
   expect_s3_class(tb_estimates, "tbl_df")
   expect_s3_class(tb_expenditure, "tbl_df")
+  expect_s3_class(tb_high_burden, "tbl_df")
   expect_s3_class(tb_labs, "tbl_df")
   expect_s3_class(tb_notifications, "tbl_df")
 })
@@ -20,6 +21,14 @@ test_that("column types", {
   expect_type(tb_all$year, "double")
   expect_type(tb_all$variable, "character")
   expect_type(tb_all$value, "double")
+
+  expect_type(tb_dictionary$dataset, "character")
+  expect_type(tb_dictionary$variable, "character")
+  expect_type(tb_dictionary$definition, "character")
+
+  expect_type(tb_high_burden$country, "character")
+  expect_type(tb_high_burden$year, "double")
+  expect_type(tb_high_burden$share_global_incidence, "double")
 })
 
 test_that("dataset snapshots", {
@@ -29,6 +38,7 @@ test_that("dataset snapshots", {
   expect_snapshot(head(tb_dictionary, n = 20))
   expect_snapshot(head(tb_estimates, n = 20))
   expect_snapshot(head(tb_expenditure, n = 20))
+  expect_snapshot(head(tb_high_burden, n = 20))
   expect_snapshot(head(tb_labs, n = 20))
   expect_snapshot(head(tb_notifications, n = 20))
 
@@ -38,6 +48,7 @@ test_that("dataset snapshots", {
   expect_snapshot(tail(tb_dictionary, n = 20))
   expect_snapshot(tail(tb_estimates, n = 20))
   expect_snapshot(tail(tb_expenditure, n = 20))
+  expect_snapshot(tail(tb_high_burden, n = 20))
   expect_snapshot(tail(tb_labs, n = 20))
   expect_snapshot(tail(tb_notifications, n = 20))
 })

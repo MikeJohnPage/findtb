@@ -38,3 +38,17 @@ NULL
 #' }
 #' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
 "tb_dictionary"
+
+#' World Health Organization TB high burden countries
+#'
+#' A list of high burden TB countries.
+#'
+#' @format
+#' A data frame with 180 rows and 3 columns:
+#' \describe{
+#'   \item{country}{Country name}
+#'   \item{year}{Year}
+#'   \item{share_global_incidence}{Share of the global TB burden (in terms of the absolute number of incident cases)}
+#' }
+#' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
+"tb_high_burden"
