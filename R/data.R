@@ -11,7 +11,7 @@
 #' * all (all of the above combined)
 #' 
 #' @name tb
-#' @aliases tb_budget tb_community tb_estimates tb_expenditures tb_labs tb_notifications tb_all
+#' @aliases tb_budget tb_community tb_estimates tb_expenditure tb_labs tb_notifications tb_all
 #' @format 
 #' A data frame with 6 columns and a variable number of rows:
 #' \describe{
@@ -34,7 +34,7 @@ NULL
 #' \describe{
 #'   \item{dataset}{Matching tb_* dataset}
 #'   \item{variable}{Matching variable from tb_* dataset}
-#'   \item{defintion}{Definition}
+#'   \item{definition}{Definition}
 #' }
 #' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
 "tb_dictionary"

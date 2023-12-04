@@ -5,7 +5,7 @@
 \alias{tb_budget}
 \alias{tb_community}
 \alias{tb_estimates}
-\alias{tb_expenditures}
+\alias{tb_expenditure}
 \alias{tb_labs}
 \alias{tb_notifications}
 \alias{tb_all}
