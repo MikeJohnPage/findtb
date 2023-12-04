@@ -18,3 +18,5 @@ Depends:
 LazyData: true
 Imports: 
     tibble
+Suggests: 
+    dplyr
