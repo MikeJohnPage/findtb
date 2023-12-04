@@ -36,9 +36,11 @@ The package exports seven datasets called:
 - `tb_labs`
 - `tb_notifications`
 
-It also ships with a data dictionary to lookup definitions:
+It also ships with a data dictionary to lookup definitions and a list of high TB
+burden countries:
 
 - `tb_dictionary`
+- `tb_high_burden`
 
 ## Installation
 
@@ -57,6 +59,11 @@ tb_estimates
 # Lookup variable defintions in the dictionary:
 tb_dictionary |>
   dplyr::filter(dataset == "tb_estimates")
+
+# Return the estimates for 2021 of only the high TB burden countries:
+tb_estimates |> 
+  dplyr::filter(year == 2021) |> 
+  dplyr::semi_join(tb_high_burden)
 ```
 
 ## Development

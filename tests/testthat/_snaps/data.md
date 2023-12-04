@@ -175,6 +175,35 @@
 ---
 
     Code
+      head(tb_high_burden, n = 20)
+    Output
+      # A tibble: 20 x 3
+         country     year share_global_incidence
+         <chr>      <dbl>                  <dbl>
+       1 Angola      2016                     83
+       2 Angola      2017                     83
+       3 Angola      2018                     83
+       4 Angola      2019                     83
+       5 Angola      2020                     83
+       6 Bangladesh  2016                     83
+       7 Bangladesh  2017                     83
+       8 Bangladesh  2018                     83
+       9 Bangladesh  2019                     83
+      10 Bangladesh  2020                     83
+      11 Brazil      2016                     83
+      12 Brazil      2017                     83
+      13 Brazil      2018                     83
+      14 Brazil      2019                     83
+      15 Brazil      2020                     83
+      16 Cambodia    2016                      3
+      17 Cambodia    2017                      3
+      18 Cambodia    2018                      3
+      19 Cambodia    2019                      3
+      20 Cambodia    2020                      3
+
+---
+
+    Code
       head(tb_labs, n = 20)
     Output
       # A tibble: 20 x 6
@@ -403,6 +432,35 @@
       18 Zimbabwe ZWE          AFR          2022 rcvd_tot_grnt      1659228
       19 Zimbabwe ZWE          AFR          2022 rcvd_tot_sources  20149771
       20 Zimbabwe ZWE          AFR          2022 rcvd_tot_usaid    10459591
+
+---
+
+    Code
+      tail(tb_high_burden, n = 20)
+    Output
+      # A tibble: 20 x 3
+         country                      year share_global_incidence
+         <chr>                       <dbl>                  <dbl>
+       1 Mozambique                   2021                   84  
+       2 Myanmar                      2021                   84  
+       3 Nigeria                      2021                   84  
+       4 Pakistan                     2021                   84  
+       5 Philippines                  2021                   84  
+       6 South Africa                 2021                   84  
+       7 Thailand                     2021                   84  
+       8 Uganda                       2021                   84  
+       9 United Republic of Tanzania  2021                   84  
+      10 Viet Nam                     2021                   84  
+      11 Central African Republic     2021                    2.3
+      12 Congo                        2021                    2.3
+      13 Gabon                        2021                    2.3
+      14 Lesotho                      2021                    2.3
+      15 Liberia                      2021                    2.3
+      16 Mongolia                     2021                    2.3
+      17 Namibia                      2021                    2.3
+      18 Papua New Guinea             2021                    2.3
+      19 Sierra Leone                 2021                    2.3
+      20 Zambia                       2021                    2.3
 
 ---
 
