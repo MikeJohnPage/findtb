@@ -9,7 +9,7 @@ Authors@R: c(
   )
 Description: Downloads and cleans data from the WHO on TB. The data is exported
     to a common rectangular format, for calculation by the finddxgap package.
-License: GPL (>= 3)
+License: GPL (>= 3) + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
