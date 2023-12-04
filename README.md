@@ -19,7 +19,7 @@ package.
 
 The package exports seven datasets called:
 
-- `tb_all` (all of the below)
+- `tb_all` (all of the below combined)
 - `tb_budget`
 - `tb_community`
 - `tb_estimates`
