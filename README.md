@@ -5,7 +5,7 @@ The findtb package downloads TB data from the WHO, cleans the data, and
 then exports it into a standard rectangular format for use in the gap package.
 
 The package exports seven datasets called:
-- `tb_all` (a data set joining all of the below)
+- `tb_all` (all of the below)
 - `tb_budget`
 - `tb_community`
 - `tb_estimates`
