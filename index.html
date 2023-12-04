@@ -81,9 +81,10 @@
 <li><code>tb_labs</code></li>
 <li><code>tb_notifications</code></li>
 </ul>
-<p>It also ships with a data dictionary to lookup definitions:</p>
+<p>It also ships with a data dictionary to lookup definitions and a list of high TB burden countries:</p>
 <ul>
 <li><code>tb_dictionary</code></li>
+<li><code>tb_high_burden</code></li>
 </ul>
 </div>
 <div class="section level2">
@@ -128,7 +129,26 @@
 <span><span class="co">#&gt; 3 tb_estimates e_inc_100k    Estimated incidence (all forms) per 100 000 popula…</span></span>
 <span><span class="co">#&gt; 4 tb_estimates e_inc_num     Estimated number of incident cases (all forms)     </span></span>
 <span><span class="co">#&gt; 5 tb_estimates e_mort_100k   Estimated mortality of TB cases (all forms) per 10…</span></span>
-<span><span class="co">#&gt; 6 tb_estimates e_pop_num     Estimated total population number</span></span></code></pre></div>
+<span><span class="co">#&gt; 6 tb_estimates e_pop_num     Estimated total population number</span></span>
+<span></span>
+<span><span class="co"># Return the estimates for 2021 of only the high TB burden countries:</span></span>
+<span><span class="va">tb_estimates</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">2021</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter-joins.html" class="external-link">semi_join</a></span><span class="op">(</span><span class="va">tb_high_burden</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 168 × 6</span></span>
+<span><span class="co">#&gt;    country    country_code g_whoregion  year variable         value</span></span>
+<span><span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;        &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt;  1 Angola     AGO          AFR          2021 c_cdr               56</span></span>
+<span><span class="co">#&gt;  2 Angola     AGO          AFR          2021 c_newinc_100k      179</span></span>
+<span><span class="co">#&gt;  3 Angola     AGO          AFR          2021 e_inc_100k         322</span></span>
+<span><span class="co">#&gt;  4 Angola     AGO          AFR          2021 e_inc_num       111000</span></span>
+<span><span class="co">#&gt;  5 Angola     AGO          AFR          2021 e_mort_100k         59</span></span>
+<span><span class="co">#&gt;  6 Angola     AGO          AFR          2021 e_pop_num     34503774</span></span>
+<span><span class="co">#&gt;  7 Bangladesh BGD          SEA          2021 c_cdr               82</span></span>
+<span><span class="co">#&gt;  8 Bangladesh BGD          SEA          2021 c_newinc_100k      181</span></span>
+<span><span class="co">#&gt;  9 Bangladesh BGD          SEA          2021 e_inc_100k         221</span></span>
+<span><span class="co">#&gt; 10 Bangladesh BGD          SEA          2021 e_inc_num       375000</span></span>
+<span><span class="co">#&gt; # ℹ 158 more rows</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="development">Development<a class="anchor" aria-label="anchor" href="#development"></a>
