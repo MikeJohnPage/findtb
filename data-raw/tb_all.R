@@ -1,3 +1,5 @@
+# This script should only be run/updated once all other scripts have been built,
+# with the exception of `tb_dictionary.R`
 pkgload::load_all()
 
 tb_all <- dplyr::bind_rows(

@@ -10,7 +10,6 @@ A data frame with 45 rows and 4 columns:
 \item{dataset}{Matching tb_* dataset}
 \item{variable}{Matching variable from tb_* dataset}
 \item{defintion}{Definition}
-...
 }
 }
 \source{
