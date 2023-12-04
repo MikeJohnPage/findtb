@@ -26,8 +26,9 @@ The package exports seven datasets called:
 - `tb_labs`
 - `tb_notifications`
 
-It also ships with a data dictionary to lookup definitions: -
-`tb_dictionary`
+It also ships with a data dictionary to lookup definitions:
+
+- `tb_dictionary`
 
 ## Installation
 
