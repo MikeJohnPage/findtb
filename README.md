@@ -14,7 +14,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 ## Overview
 
 The findtb package downloads TB data from the WHO, cleans the data, and
-then exports it into a standard rectangular format for use in the gap
+then exports it into a standard rectangular format for use in the dxgap
 package.
 
 The package exports seven datasets:
