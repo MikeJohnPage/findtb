@@ -2,16 +2,16 @@
 #'
 #' This package exports seven TB data sets from the World Health Organization
 #' Global Tuberculosis Report:
-#' * budget
-#' * community
-#' * estimates
-#' * expenditures
-#' * labs
-#' * notifications
-#' * all (all of the above combined)
+#' * tb_all (all of the below combined)
+#' * tb_budget
+#' * tb_community
+#' * tb_estimates
+#' * tb_expenditures
+#' * tb_labs
+#' * tb_notifications
 #' 
-#' @name tb
-#' @aliases tb_budget tb_community tb_estimates tb_expenditure tb_labs tb_notifications tb_all
+#' @name tb_all
+#' @aliases tb_budget tb_community tb_estimates tb_expenditure tb_labs tb_notifications
 #' @format 
 #' A data frame with 6 columns and a variable number of rows:
 #' \describe{
@@ -39,7 +39,7 @@ NULL
 #' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
 "tb_dictionary"
 
-#' World Health Organization TB high burden countries
+#' World Health Organization high TB burden countries
 #'
 #' A list of high burden TB countries.
 #'

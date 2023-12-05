@@ -3,7 +3,7 @@
 \docType{data}
 \name{tb_high_burden}
 \alias{tb_high_burden}
-\title{World Health Organization TB high burden countries}
+\title{World Health Organization high TB burden countries}
 \format{
 A data frame with 180 rows and 3 columns:
 \describe{
